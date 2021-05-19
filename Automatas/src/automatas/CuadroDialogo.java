@@ -1,0 +1,44 @@
+package automatas;
+
+import javax.swing.*;
+
+
+public class CuadroDialogo {
+    public boolean isNum(String cad){
+        try{
+            Integer.parseInt(cad);
+            return true;
+        }catch(NumberFormatException nfe){
+            JOptionPane.showMessageDialog(null, "Solo Numeros", "Error",0);
+            return false;
+        }
+    }
+    
+    public String cap(String mensaje){
+        return JOptionPane.showInputDialog(mensaje);
+    }
+    
+    public int capInt(String mensaje){
+        String aux="";
+        do{
+            aux = cap(mensaje);
+        }while(!isNum(aux));
+        return Integer.parseInt(aux);
+    }
+    
+    public String capBox(String mensaje, String[] el){
+        return (String)JOptionPane.showInputDialog(null,mensaje,
+                "Seleccione", 3, null, el, el[0]);
+    }
+    
+    public void mensaje(String mens, int tipo){
+        JOptionPane.showMessageDialog(null, mens, "Equivalencia de"
+        +" Automatas Finitos Deterministas", tipo);
+    }
+    
+    public boolean confirm(String mensaje){
+        if(JOptionPane.showConfirmDialog(null, mensaje)==0)
+            return true;
+        else return false;
+    }
+}

@@ -1,0 +1,62 @@
+Algoritmo de Simplificación de Estados
+
+Estructura de los Autómatas
+Estados, arreglo de estados
+alfabeto, arreglo de String
+Añadir el método toString
+para imprimir su definición formal
+Esto quiere decir que necesitamos el
+método to string en las 
+los estados y las Transiciones
+K, S, Sigma, F, Función-^
+
+Estructura del estado
+Arreglo de transiciones
+
+Comparación
+Hash set de comparaciones de estados
+Cola con estados a Comparar
++Metodod de comparar estados, que regrese booleano compatibles
++Constructor que soporte un solo autómata
+
+Clase de Simplificación
+Tiene un solo automata a1
+Llama a la Clase comparación
+Cola de Estados para comparar
+Booleano grande aun
+entero que cuenta simplificaciones
++Método de simplificación de automata
+ recibe un autómata
+
+Simplificación de autómata
+if(a1.estados.tamaño>1)
+	do{
+		e1 = cola.despacha()
+		e2 = cola.despacha()
+		simplificaciones ++
+		grandeAun= simplificaciones0>noEstados-1?false:true
+		if(c.comparaEstados(e1, e1))
+			a1 = nuevoAutomata(e1, e2)
+	}while(grandeAun && cola no esta vacia)
+ImprimeAutomata(a1)//Resultado final
+
+nuevoAutomata(eQuita, eQueda){
+	Automata a;
+	Estado auxiliar = a1.inicial
+	String comp
+	for(int=0; i<a1.estados.length; i++)
+		for(int j=0; j<a1.alfabeto.length; j++)
+			comp = a1
+	//Los que llegan a él, se redirigen a su estado equivalente
+}
+
+
+Algoritmo para obtener 2 autómatas a comparar
+Si el autómata tiene 1 estado, ya está simplificado
+Sino
+	Tomar [0] y[1]
+	Simplificar
+		Obtener nuevo autómata
+		Disminuir su tamaño en 1
+	Imprimir nuevo autómata
+

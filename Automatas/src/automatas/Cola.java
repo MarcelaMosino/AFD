@@ -4,6 +4,7 @@ package automatas;
 public class Cola<T> implements Encolable<T>{
     Nodo<T> primero;
     Nodo<T> ultimo;
+    int tam=0;
     
     public Cola (){
         primero = null;
@@ -27,12 +28,20 @@ public class Cola<T> implements Encolable<T>{
         else{
             ultimo.siguiente = nuevo;
             ultimo = nuevo;
-        }        
+        }   tam++;     
+    }
+    
+    public void vaciar(){
+        while(!estaVacia())
+            despacha();
+    }
+    
+    public String toString(){
+        return "Tamano nodo ="+tam;
     }
 
     @Override
     public boolean estaVacia() {
         return primero==null;
     }    
-
 }

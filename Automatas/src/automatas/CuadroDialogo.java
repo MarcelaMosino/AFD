@@ -32,13 +32,19 @@ public class CuadroDialogo {
     }
     
     public void mensaje(String mens, int tipo){
-        JOptionPane.showMessageDialog(null, mens, "Equivalencia de"
-        +" Automatas Finitos Deterministas", tipo);
+        JOptionPane.showMessageDialog(null, mens,
+        " Automatas Finitos Deterministas", tipo);
+    }
+    
+    //Imprime con imagen de Bob Esponja para diferenciar
+    public void mensaje(String mens){
+        JOptionPane.showMessageDialog(null, mens,
+        " Automata Final Simplificado", -1, new ImageIcon("Res.jpg"));
     }
     
     public boolean confirm(String mensaje){
         if(JOptionPane.showConfirmDialog(null, mensaje)==0)
             return true;
         else return false;
-    }
+    }    
 }
